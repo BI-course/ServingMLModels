@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: serving-ml-models-api
+    env: docker
+    dockerfilePath: ./dockerfiles/Dockerfile.flask-gunicorn-app
+    dockerContext: .
+    envVars:
+      - key: PORT
+        value: 8000
