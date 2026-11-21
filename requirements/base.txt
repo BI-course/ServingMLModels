@@ -9,3 +9,4 @@ imblearn
 mlxtend
 flask
 flask-corsgunicorn
+gunicorn
