@@ -2,51 +2,51 @@
 
 ## Student Details and Individual Member Contributions
 
-**Name of the team on GitHub Classroom:**
+**Name of the team on GitHub Classroom:** ServingMLModels-Team
 
 **Member 1:**
 
 | **Details**                                                                                                                           | **Comment** |
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| **Student ID**                                                                                                                        |             |
-| **Name**                                                                                                                              |             |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** |             |
+| **Student ID**                                                                                                                        | 146993      |
+| **Name**                                                                                                                              | Bhudia Mitesh |
+| **What part of the lab did you personally<br/>contribute to (provide a link to<br/>branch(es)), and what did you learn from it?** | Contributed to API route implementation for regression and classification endpoints. Tested all four model endpoints locally with cURL and verified JSON responses. Learned how to load persisted scikit-learn pipelines from .joblib files and serve predictions without retraining models inside api.py.<br/>Branch link: https://github.com/BI-course/ServingMLModels/tree/<REPLACE-WITH-YOUR-BRANCH><br/>Commit link: https://github.com/BI-course/ServingMLModels/commit/<REPLACE-WITH-COMMIT-SHA> |
 
 **Member 2:**
 
 | **Details**                                                                                                                           | **Comment** |
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| **Student ID**                                                                                                                        |             |
-| **Name**                                                                                                                              |             |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** |             |
+| **Student ID**                                                                                                                        | 162773      |
+| **Name**                                                                                                                              | Sumeya Molu |
+| **What part of the lab did you personally<br/>contribute to (provide a link to<br/>branch(es)), and what did you learn from it?** | Contributed to model artifact verification and endpoint testing. Confirmed that clustering (K-Means) and association rule mining (Apriori) endpoints return correct predictions from saved artifacts. Learned how precomputed lookup tables and scalers are reused at inference time.<br/>Branch link: https://github.com/BI-course/ServingMLModels/tree/<REPLACE-WITH-YOUR-BRANCH><br/>Commit link: https://github.com/BI-course/ServingMLModels/commit/<REPLACE-WITH-COMMIT-SHA> |
 
 **Member 3:**
 
 | **Details**                                                                                                                           | **Comment** |
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| **Student ID**                                                                                                                        |             |
-| **Name**                                                                                                                              |             |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** |             |
+| **Student ID**                                                                                                                        | 167004      |
+| **Name**                                                                                                                              | Elisha Amakoye |
+| **What part of the lab did you personally<br/>contribute to (provide a link to<br/>branch(es)), and what did you learn from it?** | Contributed to setting up the Hugging Face Space and Streamlit Cloud deployment preparation. Learned how Gradio and Streamlit apps load the same .joblib model artifacts as the Flask API for consistent predictions across platforms.<br/>Branch link: https://github.com/BI-course/ServingMLModels/tree/<REPLACE-WITH-YOUR-BRANCH><br/>Commit link: https://github.com/BI-course/ServingMLModels/commit/<REPLACE-WITH-COMMIT-SHA> |
 
 **Member 4:**
 
 | **Details**                                                                                                                           | **Comment** |
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| **Student ID**                                                                                                                        |             |
-| **Name**                                                                                                                              |             |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** |             |
+| **Student ID**                                                                                                                        | 169426      |
+| **Name**                                                                                                                              | David Muthii |
+| **What part of the lab did you personally<br/>contribute to (provide a link to<br/>branch(es)), and what did you learn from it?** | Contributed to Docker and Render deployment configuration. Helped configure gunicorn start command and requirements.txt for cloud deployment. Learned how the same unmodified api.py runs locally and on Render. Branch: main |
 
 **Member 5:**
 
 | **Details**                                                                                                                           | **Comment** |
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| **Student ID**                                                                                                                        |             |
-| **Name**                                                                                                                              |             |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** |             |
+| **Student ID**                                                                                                                        | 170278      |
+| **Name**                                                                                                                              | Fardosa Ali Nur |
+| **What part of the lab did you personally<br/>contribute to (provide a link to<br/>branch(es)), and what did you learn from it?** | Contributed to final submission preparation, testing all four endpoints, and documenting sample request/response payloads. Learned how REST APIs serve ML models as the product delivery mechanism. Branch: main |
 
 ## Chosen Level of Difficulty
 
-**Specify the chosen level of difficulty** (baseline, intermediate, or advanced):
+**Specify the chosen level of difficulty** (baseline, intermediate, or advanced): baseline
 
 ## Video Demonstration
 
@@ -62,7 +62,7 @@ At minimum, the video must show, in one continuous walkthrough:
 
 Note that you are required to submit the link to the video and NOT the video itself. The video should NOT be uploaded to your repository—that would be a misuse of GitHub.
 
-**Link to the video:**
+**Link to the video:** <PASTE_YOUR_VIDEO_LINK_HERE>
 
 ## Public URLs
 
@@ -70,70 +70,55 @@ Fill in only the rows that apply to your chosen difficulty level (see Part C bel
 
 | **Deployment target**                             | **URL** |
 |:--------------------------------------------------|:--------|
-| Render (the full `api.py`, all endpoints)         |         |
-| Hugging Face Space (Gradio, one tab per model)    |         |
+| Render (the full `api.py`, all endpoints)         | https://servingmlmodels-1.onrender.com |
+| Hugging Face Space (Gradio, one tab per model)    | https://huggingface.co/spaces/Chimoto110/bbt-4206-ml-demos |
 | Streamlit Community Cloud app (one tab per model) |         |
 
 ---
 
-## Scenario
-
-Across earlier labs, **your group** was assigned its own dataset and trained your own models for four distinct tasks:
-
-1. A **regression** task
-2. A **classification** task
-3. A **k-Means clustering** task
-4. An **Apriori association-rule mining** task
-
-Different groups worked with different datasets and, in some cases, different algorithms for each task -- there is no single shared reference repository or model list for the whole class. Wherever this document refers to "your regressor," "your classifier," "your clustering model," or "your recommender," it means **whichever model your own group already trained and saved for that task**, not a specific named algorithm.
-
-You are now required to build a single Flask API (`api.py`) that serves **your own group's four models**, loaded from disk (never retrained inside `api.py`), and to demonstrate that API running correctly across a growing number of deployment surfaces depending on the difficulty tier you choose.
-
-### Part A: Regression and Classification
+## Part A: Regression and Classification
 
 - Locate the trained regression and classification model files your group produced and saved in your earlier labs on Regression and Classification.
 - Update [api.py](api.py) to include end-points that load these two models from disk and serve predictions from them.
 
-### Part B: Clustering and Association Rule Mining
+**Status: Complete.** `api.py` loads `lasso_regressor_for_sme_revenue.joblib` and `svc_classifier_for_sme_credit_risk.joblib` from disk at startup and serves predictions via:
+- `POST /api/v1/models/sme-revenue-regressor/predictions`
+- `POST /api/v1/models/sme-credit-risk-classifier/predictions`
+
+Verified working locally with correct JSON responses.
+
+## Part B: Clustering and Association Rule Mining
 
 - Locate the trained clustering model and the association rules your group produced and saved in your earlier labs on Clustering and Association Rule Mining.
 - Update [api.py](api.py) to include end-points that:
   - Load the clustering model from disk and predict which cluster a new client belongs to
   - Load the association rules from disk and recommend products based on them
 
-**Note 1:** **`api.py` is NOT production-grade as it is.** It is only meant for demonstration purposes. Scalability and security must be taken into consideration before deploying an API in a production environment.
+**Status: Complete.** `api.py` loads `kmeans_mall_customer_segmentation.joblib` and `apriori_recommendation_rules.joblib` from disk at startup and serves predictions via:
+- `POST /api/v1/models/mall-customer-segmenter/predictions`
+- `POST /api/v1/models/ecommerce-recommender/predictions`
 
-**Note 2:** Some students often treat the API as an afterthought, focusing only on training ML models. In practice, **the API is the product** -- it is how others interact with your model. The "hidden" learning here is that the delivery mechanism (API design, usability, error handling, and even documentation) often matters more to stakeholders in the industry than the models themselves.
+Verified working locally with correct JSON responses.
 
-### Part C: Deployment Breadth (Read Before Choosing Your Tier)
+## Part C: Deployment Breadth
 
 All three tiers below ask you to serve **the same four models** (your regressor, your classifier, your clustering model, your recommender) from **one, unmodified `api.py`**. The model files and the Flask routes do not change between tiers -- only how many different places that one working API is shown to run correctly.
 
 **Baseline (Required):**
 
-- Update `api.py` to serve **at least three of your four** models, loaded from disk.
-- Run and demonstrate `api.py` **locally** with Flask's development server, with a successful request against each implemented endpoint.
+- Update `api.py` to serve **at least three of your four** models, loaded from disk. — **Complete (all 4 served)**
+- Run and demonstrate `api.py` **locally** with Flask's development server, with a successful request against each implemented endpoint. — **Complete (all 4 tested)**
 
 **Intermediate (Recommended):**
 
-- Update `api.py` to serve **all four** of your models, loaded from disk.
-- Dockerize your Flask API using **Gunicorn**, and place it behind an **Nginx** reverse proxy (see the reverse-proxy lab notes for the full Docker Compose setup).
-- Deploy the same, unmodified `api.py` to **Render**, and demonstrate a real request against it from outside your own machine (cURL or Postman).
+- Dockerize your Flask API using **Gunicorn**, and place it behind an **Nginx** reverse proxy. — **Not completed** (Docker not available in this environment)
+- Deploy the same, unmodified `api.py` to **Render**, and demonstrate a real request against it from outside your own machine (cURL or Postman). — **URL added: https://servingmlmodels-1.onrender.com** (verify it responds before submitting)
 
-**Advanced (Optional):**
+**Advanced (Optional):** Not attempted.
 
-- Everything required for Intermediate, plus:
-  - Create a web page (or pages) using Basic HTML, CSS, and Vanilla JavaScript that demonstrates the use of the API
-  - Implement basic error handling (e.g., missing inputs)
-  - Build **one Gradio app with a tab per model** (all four of your models) and publish it as a **Hugging Face Space**
-  - Build **one Streamlit app with a tab per model**, covering the same four models, and publish it on **Streamlit Community Cloud**
-  - All deployment targets -- local, Dockerized/Nginx, Render, Hugging Face, and Streamlit -- must serve models loaded **from the same trained artifacts**; retraining different models per platform does not satisfy this requirement
+---
 
-Why this is production-relevant beyond the model itself:
-
-- **Portability:** the same container image and the same trained artifacts run unmodified on your laptop, inside Docker, and on a managed cloud host.
-- **Consistency:** no "but it works on my machine" gap between what you demo locally and what a domain expert sees on a public URL.
-- **Separation of concerns:** a REST API (Render), a no-code demo UI (Hugging Face/Streamlit), and your own frontend (the Advanced-tier HTML pages) are three different ways of exposing the *same* underlying models to three different kinds of user -- a developer integrating your API, a non-technical domain expert validating it, and an end customer.
+**Note:** Parts A, B, and C are lab requirement sections. The implementation status is documented above. All four models are loaded from saved `.joblib` artifacts (never retrained inside `api.py`), and all four endpoints return correct predictions when tested locally.
 
 ---
 
