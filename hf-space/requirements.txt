@@ -1,8 +1,2 @@
-gradio
-joblib
-pandas
-numpy
-scikit-learn
-imbalanced-learn
-mlxtend
-spaces
+-r requirements/base.txt
+gunicorn
