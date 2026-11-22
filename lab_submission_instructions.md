@@ -10,7 +10,7 @@
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
 | **Student ID**                                                                                                                        | 146993      |
 | **Name**                                                                                                                              | Bhudia Mitesh |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** | Contributed to API development and testing for all four model endpoints. Learned how to serve scikit-learn pipelines via Flask without retraining models inside the API. Branch: main |
+| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** | Contributed to API development and testing for all four model endpoints. Implemented automated endpoint verification, added client-side missing-input error handling.Learned how to serve scikit-learn pipelines via Flask without retraining models inside the API. Branch: main |
 
 **Member 2:**
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serving ML Models</title>
+<title>Group D5 - Serving ML Models</title>
 <style>
   :root {
     --bg: #f3f4f6;
@@ -39,7 +39,7 @@
   }
   .info-grid {
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 180px 1fr;
     row-gap: 10px;
     column-gap: 16px;
     font-size: 14px;
@@ -107,25 +107,18 @@
 <body>
 
 <header>
-  <h1>Serving Machine Learning Models through a RESTish API using Flask in Python</h1>
-  <p>BBT 4206 &middot; Business Intelligence II &middot; Week 4-6 of 13</p>
+  <h1>Group D5 — Serving ML Models through a RESTish API using Flask</h1>
+  <p>BBT 4206 &middot; Business Intelligence II &middot; Multi-Surface ML Deployment</p>
 </header>
 
 <main>
   <div class="info-card">
     <dl class="info-grid">
-      <dt>Course Codes</dt><dd>BBT 4206</dd>
-      <dt>Course Name</dt><dd>BBT 4206: Business Intelligence II (Week 4-6 of 13)</dd>
-      <dt>Semester</dt><dd>September to December 2026</dd>
-      <dt>Lecturer</dt><dd>Allan Omondi</dd>
-      <dt>Contact</dt><dd>aomondi@strathmore.edu</dd>
-      <dt>Note</dt>
-      <dd>
-        The lecture contains both theory and practice. This forms part of the practice.
-        It is intended for educational purposes only.<br>
-        Recommended citation:
-        <a href="https://raw.githubusercontent.com/course-files/ServingMLModels/refs/heads/main/RecommendedCitation.bib" target="_blank">BibTeX</a>
-      </dd>
+      <dt>Team</dt><dd>Group D5 — ServingMLModels</dd>
+      <dt>Course</dt><dd>BBT 4206: Business Intelligence II</dd>
+      <dt>Render API</dt><dd><a href="https://servingmlmodels-1.onrender.com/" target="_blank">https://servingmlmodels-1.onrender.com/</a></dd>
+      <dt>Hugging Face Space</dt><dd><a href="https://huggingface.co/spaces/Chimoto110/bbt-4206-ml-demos" target="_blank">https://huggingface.co/spaces/Chimoto110/bbt-4206-ml-demos</a></dd>
+      <dt>Streamlit App</dt><dd><a href="https://smm-202604-d5.streamlit.app/" target="_blank">https://smm-202604-d5.streamlit.app/</a></dd>
     </dl>
   </div>
 
@@ -134,16 +127,16 @@
     <img src="RequestFlow.jpg" alt="Request Flow Diagram" style="display:block; background:#fff; padding:16px; border:1px solid #ccc; max-width:60%; margin-bottom:24px;">
     <ol class="flow-steps">
       <li><strong>Client</strong> (Postman / cURL / one of the four frontends below)
-        <div style="color:var(--muted);">Sends a request to <code>https://yourdomain/api/...</code></div>
+        <div style="color:var(--muted);">Sends a request to <code>http://127.0.0.1:5000/api/...</code> or <code>https://yourdomain/api/...</code></div>
       </li>
       <li><strong>NGINX</strong> (reverse proxy)
         <div style="color:var(--muted);">Terminates HTTPS, serves static files, forwards <code>/api/...</code> to Gunicorn.</div>
       </li>
-      <li><strong>Gunicorn</strong> (ASGI server)
-        <div style="color:var(--muted);">Manages worker processes and translates HTTP into Python ASGI calls.</div>
+      <li><strong>Gunicorn</strong> (WSGI server)
+        <div style="color:var(--muted);">Manages worker processes and translates HTTP into Python WSGI calls.</div>
       </li>
       <li><strong>Flask</strong> (this app, <code>api.py</code>)
-        <div style="color:var(--muted);">Routes the request to the matching <code>@app.route</code> and returns a response.</div>
+        <div style="color:var(--muted);">Routes the request to the matching <code>@app.route</code> and returns a response from saved models.</div>
       </li>
     </ol>
     <span class="flow-arrow">Response returns: Flask &rarr; Gunicorn &rarr; NGINX &rarr; Client</span>
@@ -178,7 +171,7 @@
   </div>
 </main>
 
-<footer>Open any card above directly in your browser -- no web server required. Remember to start <code>api.py</code> first.</footer>
+<footer>Open any card above directly in your browser -- no web server required. Remember to start <code>python api.py</code> first.</footer>
 
 </body>
 </html>
