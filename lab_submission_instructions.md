@@ -2,7 +2,7 @@
 
 ## Student Details and Individual Member Contributions
 
-**Name of the team on GitHub Classroom:** ServingMLModels-Team
+**Name of the team on GitHub Classroom:** Group D5 — ServingMLModels
 
 **Member 1:**
 
