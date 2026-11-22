@@ -26,7 +26,7 @@
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
 | **Student ID**                                                                                                                        | 167004      |
 | **Name**                                                                                                                              | Elisha Amakoye |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** | Contributed to API route implementation and request/response validation. Learned how to structure RESTish endpoints for regression, classification, clustering, and recommendation. Branch: main |
+| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** | Contributed to API route implementation and request/response validation. Learned how to structure RESTish endpoints for regression, classification, clustering, and recommendation.<br/>Repo link: https://github.com/BI-course/ServingMLModels.git |
 
 **Member 4:**
 
