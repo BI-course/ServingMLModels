@@ -46,7 +46,7 @@
 
 ## Chosen Level of Difficulty
 
-**Specify the chosen level of difficulty** (baseline, intermediate, or advanced): baseline
+**Specify the chosen level of difficulty** (baseline, intermediate, or advanced): advanced
 
 ## Video Demonstration
 
