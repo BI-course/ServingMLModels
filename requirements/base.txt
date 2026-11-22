@@ -8,5 +8,6 @@ imbalanced-learn
 imblearn
 mlxtend
 flask
-flask-corsgunicorn
+flask-cors
+gunicorn
 gunicorn
