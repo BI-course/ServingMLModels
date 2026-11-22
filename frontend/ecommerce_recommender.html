@@ -80,7 +80,7 @@
     <h1>Shopping Cart Recommender</h1>
     <p class="lead">Calls <code>POST /api/v1/models/ecommerce-recommender/predictions</code></p>
 
-    <form id="predictForm">
+    <form id="predictForm" novalidate>
       <label for="cart">Cart SKUs <span class="hint">(comma-separated, e.g. P01, P04 or H06, H07)</span></label>
       <input type="text" id="cart" value="P01, P04" required>
 
@@ -101,21 +101,36 @@
   const API_ORIGIN = `${isSecure ? "https" : "http"}://${hostname}:${isSecure ? "443" : "5000"}`;
   const API_URL = `${API_ORIGIN}/api/v1/models/ecommerce-recommender/predictions`;
 
-  // const API_URL = "http://127.0.0.1:5000/api/v1/models/ecommerce-recommender/predictions";
-
   document.getElementById("predictForm").addEventListener("submit", async function (e) {
     e.preventDefault();
     const submitBtn = document.getElementById("submitBtn");
     const result = document.getElementById("result");
 
-    const cartSkus = document.getElementById("cart").value
+    const rawCart = document.getElementById("cart").value;
+    const rawTopN = document.getElementById("top_n").value.trim();
+
+    const cartSkus = rawCart
       .split(",")
       .map(s => s.trim())
       .filter(s => s.length > 0);
 
+    const topN = parseInt(rawTopN, 10);
+
+    // Client-side missing-input validation
+    if (cartSkus.length === 0) {
+      result.className = "show err";
+      result.textContent = "Missing input: please enter at least one valid product SKU (e.g. P01, P04).";
+      return;
+    }
+    if (!rawTopN || Number.isNaN(topN) || topN < 1 || topN > 10) {
+      result.className = "show err";
+      result.textContent = "Invalid input: please enter a number of recommendations between 1 and 10.";
+      return;
+    }
+
     const payload = {
       cart: cartSkus,
-      top_n: parseInt(document.getElementById("top_n").value),
+      top_n: topN,
     };
 
     submitBtn.disabled = true;

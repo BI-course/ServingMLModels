@@ -140,7 +140,7 @@
     <h1>Mall Customer Segment Assignment</h1>
     <p class="lead">Calls <code>POST /api/v1/models/mall-customer-segmenter/predictions</code></p>
 
-    <form id="predictForm">
+    <form id="predictForm" novalidate>
       <label for="age">Age</label>
       <input type="number" id="age" value="27" required>
 
@@ -164,12 +164,6 @@
   const API_ORIGIN = `${isSecure ? "https" : "http"}://${hostname}:${isSecure ? "443" : "5000"}`;
   const API_URL = `${API_ORIGIN}/api/v1/models/mall-customer-segmenter/predictions`;
 
-  // const API_URL = "http://127.0.0.1:5000/api/v1/models/mall-customer-segmenter/predictions";
-
-  // Business-facing profile for each cluster id the K-Means model can
-  // return. This is reference material for a decision maker, so it only
-  // appears once a prediction has actually run -- shown here, not buried
-  // in the form, and with the matching cluster visually picked out.
   const SEGMENT_PROFILES = {
     0: { name: "Premium targets", stats: "Young (~33) &middot; High income &middot; High spending",
          note: "Young, affluent, high spenders" },
@@ -203,13 +197,31 @@
     const submitBtn = document.getElementById("submitBtn");
     const result = document.getElementById("result");
 
-    // Field names deliberately match the training data's own column names
-    // (including the units in the labels) -- the K-Means artifact's scaler
-    // was fit on columns named exactly this way.
+    const rawAge = document.getElementById("age").value.trim();
+    const rawIncome = document.getElementById("income").value.trim();
+    const rawSpending = document.getElementById("spending").value.trim();
+
+    // Client-side missing-input validation
+    if (!rawAge || !rawIncome || !rawSpending) {
+      result.className = "show err";
+      result.textContent = "Missing input: please fill in Age, Annual Income (k$), and Spending Score before submitting.";
+      return;
+    }
+
+    const age = parseInt(rawAge, 10);
+    const income = parseFloat(rawIncome);
+    const spending = parseFloat(rawSpending);
+
+    if (Number.isNaN(age) || Number.isNaN(income) || Number.isNaN(spending) || spending < 1 || spending > 100) {
+      result.className = "show err";
+      result.textContent = "Invalid input: ensure all fields are valid numbers and Spending Score is between 1 and 100.";
+      return;
+    }
+
     const payload = {
-      "Age": parseInt(document.getElementById("age").value),
-      "Annual Income (k$)": parseFloat(document.getElementById("income").value),
-      "Spending Score (1-100)": parseFloat(document.getElementById("spending").value),
+      "Age": age,
+      "Annual Income (k$)": income,
+      "Spending Score (1-100)": spending,
     };
 
     submitBtn.disabled = true;
