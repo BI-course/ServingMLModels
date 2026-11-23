@@ -16,7 +16,7 @@
 
 | **Details**                                                                                                                           | **Comment** |
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| **Student ID**                                                                                                                        | 162773      |
+| **Student ID**                                                                                                                        | 162773     |
 | **Name**                                                                                                                              | Sumeya Molu |
 | **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** | Contributed to model artifact preparation and endpoint testing. Learned how to load persisted .joblib files at startup and reuse across requests. Branch: main |
 
