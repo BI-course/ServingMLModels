@@ -34,7 +34,7 @@
 |:--------------------------------------------------------------------------------------------------------------------------------------|:------------|
 | **Student ID**                                                                                                                        | 169426      |
 | **Name**                                                                                                                              | David Muthii |
-| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** | Contributed to testing all four endpoints and documenting sample request payloads. Learned how to verify model predictions from saved artifacts. Branch: main |
+| **What part of the lab did you personally<br/>contribute to (provide a link to the<br/>branch(es)), and what did you learn from it?** | Created and executed the API test suite and sample JSON request payloads for all four endpoints (regression, classification, k-Means clustering, and Apriori association rules), verified HTTP status codes and missing-input error responses across local Flask, Docker/Nginx, and Render, and documented endpoint usage in the repository README. Learned how to systematically validate RESTish ML endpoints and confirm prediction consistency between local and cloud deployments. Branch: https://github.com/BI-course/serving-ml-models-202604-d5-.git|
 
 **Member 5:**
 
